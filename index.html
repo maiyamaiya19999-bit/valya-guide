@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Валя · Сайт, программа, урок — гайд</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700;800&family=DM+Sans:ital@1&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root { --accent: #5F7355; --bg: #F8F7F2; --text: #2E332B; --muted: #59605A; --block: #EFEDE4; --card: #F3F1E9; --card-border: #E0DDCF; --tip: #E9E6D9; --line: #EAE7DC; }
+body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg); color: var(--text); font-size: 17px; line-height: 1.75; -webkit-font-smoothing: antialiased; }
+.nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 48px; border-bottom: 1px solid var(--line); position: sticky; top: 0; background: var(--bg); z-index: 100; }
+.nav__mono { font-family: 'Libre Baskerville', Georgia, serif; font-style: italic; font-size: 22px; color: var(--accent); text-decoration: none; }
+.nav__logo-name { font-family: 'DM Sans', sans-serif; font-size: 14px; font-style: italic; color: #98988C; letter-spacing: .5px; }
+.container { max-width: 740px; margin: 0 auto; padding: 0 24px; }
+.hero { padding: 60px 0 40px; }
+.badge { display: inline-block; font-size: 11px; font-weight: 600; color: var(--accent); border: 1px solid var(--accent); padding: 5px 16px; margin-bottom: 20px; letter-spacing: 2px; text-transform: uppercase; }
+.hero h1 { font-family: 'Libre Baskerville', Georgia, serif; font-size: 38px; font-weight: 700; line-height: 1.25; margin-bottom: 16px; }
+.hero h1 em { font-style: italic; color: var(--accent); }
+.hero__desc { font-size: 18px; color: var(--muted); line-height: 1.7; }
+.hero__meta { font-size: 14px; color: #98988C; margin-top: 16px; letter-spacing: 1px; }
+.section-heading { font-family: 'Libre Baskerville', Georgia, serif; font-size: 30px; font-weight: 700; line-height: 1.3; padding: 56px 0 20px; border-top: 1px solid var(--card-border); }
+.section-heading span { color: var(--accent); margin-right: 8px; }
+.section-heading em { font-style: italic; color: var(--accent); }
+.section-lead { font-size: 17px; color: var(--muted); margin-bottom: 20px; }
+.highlight { background: var(--block); padding: 20px 24px; margin: 24px 0; font-size: 16px; line-height: 1.75; color: var(--muted); }
+.highlight strong { color: var(--text); }
+.sub-heading { font-family: 'Libre Baskerville', Georgia, serif; font-size: 22px; font-weight: 700; padding: 32px 0 14px; }
+.text { font-size: 17px; color: var(--muted); margin-bottom: 16px; }
+.guide-list { list-style: none; margin: 12px 0 24px; }
+.guide-list li { font-size: 16px; line-height: 1.75; color: var(--muted); padding: 8px 0 8px 20px; position: relative; border-bottom: 1px solid var(--line); }
+.guide-list li:last-child { border-bottom: none; }
+.guide-list li::before { content: ''; position: absolute; left: 0; top: 16px; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+.guide-list li strong { color: var(--text); }
+.prompt-box { background: var(--block); padding: 28px 32px; margin: 24px 0; }
+.prompt-box__title { font-family: 'Libre Baskerville', Georgia, serif; font-size: 18px; font-weight: 700; color: var(--accent); margin-bottom: 4px; }
+.prompt-box__text { font-size: 15px; line-height: 1.8; color: var(--muted); white-space: pre-wrap; }
+.btn-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0 8px; }
+.btn { display: inline-block; text-decoration: none; font-size: 13px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; padding: 12px 20px; border: 1px solid var(--accent); color: var(--accent); background: transparent; transition: .15s; }
+.btn:hover { background: var(--accent); color: #fff; }
+.btn--primary { background: var(--accent); color: #fff; }
+.btn--primary:hover { background: #4A5A43; }
+table { width: 100%; border-collapse: collapse; margin: 16px 0 28px; font-size: 15px; }
+th, td { text-align: left; vertical-align: top; padding: 12px 12px; border-bottom: 1px solid var(--line); line-height: 1.55; }
+th { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: #98988C; font-weight: 600; border-bottom: 1px solid var(--card-border); }
+td strong { color: var(--text); }
+.table-wrap { overflow-x: auto; }
+.toc { background: var(--card); border: 1px solid var(--card-border); padding: 28px 32px; margin: 8px 0 24px; }
+.toc__title { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: #98988C; font-weight: 600; margin-bottom: 14px; }
+.toc ol { list-style: none; counter-reset: toc; }
+.toc li { counter-increment: toc; padding: 7px 0; border-bottom: 1px solid var(--line); font-size: 15.5px; }
+.toc li:last-child { border-bottom: none; }
+.toc li::before { content: counter(toc, decimal-leading-zero) '.'; font-family: 'Libre Baskerville', Georgia, serif; font-style: italic; color: var(--accent); margin-right: 12px; }
+.toc a { color: var(--text); text-decoration: none; font-weight: 500; }
+.toc a:hover { color: var(--accent); }
+.check { list-style: none; margin: 12px 0 24px; }
+.check li { position: relative; padding: 8px 0 8px 32px; font-size: 16px; color: var(--muted); border-bottom: 1px solid var(--line); }
+.check li::before { content: ''; position: absolute; left: 0; top: 13px; width: 16px; height: 16px; border: 1.5px solid var(--accent); }
+.check li strong { color: var(--text); }
+.footer { text-align: center; padding: 64px 24px; border-top: 1px solid var(--card-border); margin-top: 64px; color: #98988C; font-size: 14px; }
+@media screen and (max-width: 768px) { .nav { padding: 16px 20px; } .hero h1 { font-size: 28px; } .section-heading { font-size: 24px; } .prompt-box, .toc { padding: 20px; } }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a class="nav__mono" href="#">В</a>
+  <span class="nav__logo-name">Валентина Ивушкина</span>
+</nav>
+
+<div class="container">
+
+<section class="hero">
+  <div class="badge">Личная работа · Продукт</div>
+  <h1>Сайт, программа и урок: <em>система продаж</em> восточной медицины</h1>
+  <p class="hero__desc">Три документа, из которых собирается продающая система Вали: полные тексты лендинга индивидуальной программы, устройство продуктовой линейки от бесплатной диагностики до флагмана за 70 000 ₽/мес, и доработанный сценарий продающего видеоурока. Всё построено на её собственных материалах — программе, старом лендинге и записанном уроке — и приведено в юридически аккуратную форму для оздоровительной ниши.</p>
+  <p class="hero__meta">11 БЛОКОВ САЙТА · ЛИНЕЙКА ИЗ 4 СТУПЕНЕЙ · УРОК 22 МИНУТЫ</p>
+</section>
+
+<div class="toc">
+  <div class="toc__title">Что внутри</div>
+  <ol>
+    <li><a href="#s1">Сайт: 11 блоков, готовые тексты</a></li>
+    <li><a href="#s2">Программа: линейка и устройство флагмана</a></li>
+    <li><a href="#s3">Видеоурок: что переделано и почему</a></li>
+    <li><a href="#s4">Что решить Вале — 6 вопросов</a></li>
+    <li><a href="#s5">Порядок сборки</a></li>
+  </ol>
+</div>
+
+<div class="btn-row">
+  <a class="btn btn--primary" href="downloads/files/content/step2-site-copy.md" download>Тексты сайта</a>
+  <a class="btn" href="downloads/files/content/step2-program.md" download>Программа</a>
+  <a class="btn" href="downloads/files/content/step2-lesson-script.md" download>Сценарий урока</a>
+</div>
+
+<!-- ============================================================ -->
+<h2 class="section-heading" id="s1"><span>01.</span>Сайт: <em>11 блоков</em>, продающих через диагностику</h2>
+<p class="section-lead">Главная страница продаёт не курс, а вход — бесплатную диагностику. Это правильная механика для чека 70 000 ₽/мес: решение принимается в разговоре, сайт должен довести до заявки. Логика: узнавание по симптомам → «почему не помогло раньше» → механика пищеварительного огня → её история → кейсы → формат и цена → лайт-вход «Умный детокс» для тех, кто не готов.</p>
+
+<div class="table-wrap"><table>
+  <tr><th>Блок</th><th>Задача</th><th>Ключевая строка</th></tr>
+  <tr><td><strong>1. Первый экран</strong></td><td>Оффер + бесплатная диагностика, без цен</td><td>«Восстановите пищеварение — даже если "всё перепробовали"»</td></tr>
+  <tr><td><strong>2. Узнавание</strong></td><td>6 симптомов + главная боль: «анализы в порядке, а мне плохо»</td><td>«Таблетки помогают, пока их пьёшь»</td></tr>
+  <tr><td><strong>3. Почему не помогло</strong></td><td>Таблетки · БАДы · диеты · желчегонные — лечили следствие</td><td>«Дыра в стене, заклеенная обоями»</td></tr>
+  <tr><td><strong>4. Механика</strong></td><td>Пищеварительный огонь, холод, «несварение по типу холода»</td><td>Метафора плиты</td></tr>
+  <tr><td><strong>5. Её история</strong></td><td>«Я знаю это изнутри»: 15 лет назад — сама такая клиентка</td><td>«Я буквально ожила»</td></tr>
+  <tr><td><strong>6. Путь 5 шагов</strong></td><td>Диагностика → анализы → схема → ежедневная связь → шкала</td><td>«Оцифрованный результат»</td></tr>
+  <tr><td><strong>7. Кейсы</strong></td><td>Наталья · Елена · Марина — истории вместо обещаний</td><td>«Помогите, очень хочу жить» → вышла на работу</td></tr>
+  <tr><td><strong>8. Формат и цена</strong></td><td>70 000 ₽/мес, рассрочка от 6 700, гарантия 7 дней, мест немного</td><td>Честное ограничение: ведёт каждую лично</td></tr>
+  <tr><td><strong>9. «Умный детокс»</strong></td><td>Лайт-вход: 0 / 2 500 / 5 000 ₽ для тех, кто не готов к флагману</td><td>«~20 000 участников за 10 лет»</td></tr>
+  <tr><td><strong>10. FAQ</strong></td><td>Противопоказания, продукты, работа, сборы, сложные случаи</td><td>Дисклеймер про врача — внутри, не в подвале</td></tr>
+  <tr><td><strong>11. Финал</strong></td><td>Одна кнопка — диагностика</td><td>«Даже если дальше решите справляться сами — будет ясность»</td></tr>
+</table></div>
+
+<div class="highlight"><strong>Что изменено против её старых текстов — принципиально.</strong> Прямые обещания («вылечите за 1–2 месяца», «нормализуются сахар и холестерин», «симптомы пройдут совсем») переведены в форму кейсов и пути клиентки: то же самое содержание, но юридически безопасно для оздоровительной ниши — рассказываем, что произошло с Натальей, Еленой и Мариной, а не гарантируем результат каждой. Продающая сила при этом выросла: три живые истории с деталями убеждают сильнее списка обещаний. Гарантия 7-дневного возврата сохранена — это её собственное условие и сильный сниматель риска.</div>
+
+<h3 class="sub-heading">Первый экран — как будет звучать</h3>
+<div class="prompt-box"><div class="prompt-box__title">Восстановите пищеварение — даже если «всё перепробовали»</div><div class="prompt-box__text">Индивидуальная программа: сборы восточной медицины + питание, подобранное под вашу проблему, + я на связи каждый день — до результата.
+
+Отрыжка, вздутие, тяжесть, изжога, нарушения стула — это не «нервы» и не «само пройдёт». У этих симптомов есть первопричина, и я работаю именно с ней.
+
+[Записаться на бесплатную диагностику]
+30–40 минут · разберём ваши симптомы · наметим план · без обязательств</div></div>
+
+<!-- ============================================================ -->
+<h2 class="section-heading" id="s2"><span>02.</span>Программа: <em>линейка из 4 ступеней</em></h2>
+<p class="section-lead">У Вали редкая для ниши ситуация: есть и массовый продукт с историей («Умный детокс», ~20 000 участников), и флагман с высоким чеком. Задача линейки — не смешивать их, а выстроить два входа по температуре клиентки.</p>
+
+<div class="table-wrap"><table>
+  <tr><th>Ступень</th><th>Продукт</th><th>Цена</th><th>Работа ступени</th></tr>
+  <tr><td>Бесплатно</td><td>Пробный детокс · видеоурок · диагностика</td><td>0 ₽</td><td>Контакт и демонстрация метода</td></tr>
+  <tr><td>Трипваер</td><td>«Умный детокс» Базовая</td><td>2 500 ₽*</td><td>Первая оплата: «метод работает на мне»</td></tr>
+  <tr><td>Средний</td><td>«Умный детокс» VIP + чат</td><td>5 000 ₽*</td><td>Личный контакт → мостик к флагману</td></tr>
+  <tr><td><strong>Флагман</strong></td><td><strong>Индивидуальное сопровождение</strong></td><td><strong>70 000 ₽/мес</strong> + сборы, рассрочка от 6 700 ₽</td><td>Основной доход; вход только через диагностику</td></tr>
+</table></div>
+<p class="text">* Цены детокса — с лендинга десятилетней давности; рекомендация поднять до 3 900 / 7 900 ₽ — на решение Вали.</p>
+
+<ul class="guide-list">
+  <li><strong>Два входа по температуре.</strong> Холодная («что-то с животом») → пробный детокс → базовая → VIP → диагностика. Горячая («всё перепробовала, помогите») → видеоурок → сразу диагностика → флагман.</li>
+  <li><strong>Флагман по неделям</strong> расписан в документе: старт схемы → первые сдвиги на 2-й неделе (по шкале симптомов, в цифрах) → закрепление → вывод на самостоятельность → контрольная связь через полгода-год (источник отложенных кейсов, как с Натальей).</li>
+  <li><strong>Ежедневное сопровождение — главная ценность и обоснование цены.</strong> «Каждый день на связи, схема корректируется по ходу — поэтому быстро» + честное ограничение мест.</li>
+  <li><strong>Сбор доказательной базы вшит в процесс:</strong> шкала симптомов «до/после» как скрин + отзыв в конце каждой программы с разрешением на публикацию.</li>
+</ul>
+
+<!-- ============================================================ -->
+<h2 class="section-heading" id="s3"><span>03.</span>Видеоурок: <em>перезапись</em> по доработанному сценарию</h2>
+<p class="section-lead">Записанный урок содержательно сильный: история, механика, три кейса. Доработка — про форму: холодный зритель сейчас уходит на первой минуте и устаёт к середине. Новый сценарий — 22 минуты вместо ~40, с крючком в первые 20 секунд.</p>
+
+<div class="table-wrap"><table>
+  <tr><th>Время</th><th>Блок</th><th>Что происходит</th></tr>
+  <tr><td>0:00–1:30</td><td><strong>Крючок</strong></td><td>«Если таблетки помогают, только пока вы их пьёте…» + обещание урока</td></tr>
+  <tr><td>1:30–3:00</td><td><strong>Путь клиентки</strong></td><td>Сама → гастроэнтеролог → нутрициолог: «дыра, заклеенная обоями»</td></tr>
+  <tr><td>3:00–7:30</td><td><strong>Её история</strong></td><td>Сокращена и заострена: клиники → «ничего серьёзного» → восточная медицина → «я ожила»</td></tr>
+  <tr><td>7:30–11:00</td><td><strong>Механика</strong></td><td>Плита и огонь · заморозка органов · три начала · две ловушки (ИПП, желчегонные) · две стадии + правило тёплого завтрака как выдача пользы</td></tr>
+  <tr><td>11:00–17:00</td><td><strong>Три кейса</strong></td><td>Наталья · Елена · Марина — единый каркас по 2 минуты, общий вывод: «первые изменения на второй неделе»</td></tr>
+  <tr><td>17:00–19:30</td><td><strong>Оффер</strong></td><td>5 шагов программы · цена с рассрочкой · гарантия · ограничение мест</td></tr>
+  <tr><td>19:30–21:00</td><td><strong>Возражения</strong></td><td>Сложный случай · безопасность сборов · другой город · дорого (→ детокс от 2 500)</td></tr>
+  <tr><td>21:00–22:30</td><td><strong>Призыв</strong></td><td>«Выбор за вами» → кнопка «Заполнить заявку» на диагностику</td></tr>
+</table></div>
+
+<div class="highlight"><strong>7 главных правок против текущей записи</strong> (полный список в документе): крючок вместо «здравствуйте, дорогие друзья» · хронометраж −35%, убраны повторы · один оффер вместо двух · обещание пользы в начале и выдача в середине · юр-аккуратность формулировок · перечень лекарств сокращён · 6–8 опорных слайдов. Всё содержание — её собственное, ни одного добавленного факта.</div>
+
+<!-- ============================================================ -->
+<h2 class="section-heading" id="s4"><span>04.</span>Что решить <em>Вале</em> — 6 вопросов</h2>
+<ul class="check">
+  <li><strong>Цены «Умного детокса»:</strong> оставить 2 500 / 5 000 ₽ или поднять до 3 900 / 7 900 ₽?</li>
+  <li><strong>Куда идёт заявка на диагностику:</strong> форма, Telegram, анкета — и кто отвечает?</li>
+  <li><strong>Цифры «20 000 / 7 из 10 / 79%»:</strong> подтверждаем источник или убираем проценты?</li>
+  <li><strong>Гарантия 7-дневного возврата</strong> на флагмане — оставляем (рекомендую: да)?</li>
+  <li><strong>Юрформа и дисклеймер</strong> — сверить с юристом: ниша чувствительная.</li>
+  <li><strong>Написание школы в регалиях</strong> и актуальные площадки (Instagram, Telegram, сайт).</li>
+</ul>
+
+<!-- ============================================================ -->
+<h2 class="section-heading" id="s5"><span>05.</span>Порядок <em>сборки</em></h2>
+<div class="table-wrap"><table>
+  <tr><th>#</th><th>Что</th><th>Чем</th></tr>
+  <tr><td>1</td><td>Ответить на 6 вопросов выше</td><td>Созвон с Майей</td></tr>
+  <tr><td>2</td><td>Перезаписать урок по сценарию (суфлёр) + 6–8 слайдов</td><td>Сценарий из этого гайда</td></tr>
+  <tr><td>3</td><td>Собрать лендинг из текстов сайта</td><td>Гайд-скилл в палитре Вали (травяная гамма этой страницы)</td></tr>
+  <tr><td>4</td><td>Переоформить PDF «Умного детокса» в новом стиле</td><td>Те же дизайн-скиллы</td></tr>
+  <tr><td>5</td><td>Настроить приём заявок на диагностику и оплату детокса</td><td>Форма/бот</td></tr>
+  <tr><td>6</td><td>Контент на трафик: reels с кейсами и «правилом тёплого завтрака»</td><td>Следующий шаг работы</td></tr>
+</table></div>
+
+<div class="btn-row">
+  <a class="btn btn--primary" href="downloads/files/content/step2-site-copy.md" download>Тексты сайта (11 блоков)</a>
+  <a class="btn" href="downloads/files/content/step2-program.md" download>Программа и линейка</a>
+  <a class="btn" href="downloads/files/content/step2-lesson-script.md" download>Сценарий урока</a>
+</div>
+
+</div>
+
+<footer class="footer">© 2026 · maysoulme · Личная работа. Материалы не для передачи третьим лицам.</footer>
+
+</body>
+</html>
