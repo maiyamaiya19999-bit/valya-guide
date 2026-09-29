@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Конспект созвона 29.09 — Валя × Майя</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700;800&family=DM+Sans:ital@1&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root { --accent: #5F7355; --bg: #F8F7F2; --text: #2E332B; --muted: #59605A; --block: #EFEDE4; --hair: #E0DDCF; --line: #EAE7DC; --soft: #98988C; }
+body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg); color: var(--text); font-size: 17px; line-height: 1.75; -webkit-font-smoothing: antialiased; }
+.nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 48px; border-bottom: 1px solid var(--line); position: sticky; top: 0; background: var(--bg); z-index: 100; }
+.nav__mono { font-family: 'Libre Baskerville', Georgia, serif; font-style: italic; font-size: 22px; color: var(--accent); text-decoration: none; }
+.nav__logo-name { font-family: 'DM Sans', sans-serif; font-size: 14px; font-style: italic; color: var(--soft); letter-spacing: .5px; }
+.container { max-width: 740px; margin: 0 auto; padding: 0 24px; }
+.hero { padding: 56px 0 34px; }
+.badge { display: inline-block; font-size: 11px; font-weight: 600; color: var(--accent); border: 1px solid var(--accent); padding: 5px 16px; margin-bottom: 20px; letter-spacing: 2px; text-transform: uppercase; }
+.hero h1 { font-family: 'Libre Baskerville', Georgia, serif; font-size: 36px; font-weight: 700; line-height: 1.25; margin-bottom: 14px; }
+.hero h1 em { font-style: italic; color: var(--accent); }
+.hero__desc { font-size: 17.5px; color: var(--muted); line-height: 1.7; }
+.hero__meta { font-size: 14px; color: var(--soft); margin-top: 14px; letter-spacing: 1px; }
+.section-heading { font-family: 'Libre Baskerville', Georgia, serif; font-size: 27px; font-weight: 700; line-height: 1.3; padding: 48px 0 16px; border-top: 1px solid var(--hair); }
+.section-heading span { color: var(--accent); margin-right: 8px; }
+.section-heading em { font-style: italic; color: var(--accent); }
+.highlight { background: var(--block); padding: 20px 24px; margin: 22px 0; font-size: 16px; line-height: 1.75; color: var(--muted); }
+.highlight strong { color: var(--text); }
+.text { font-size: 16.5px; color: var(--muted); margin-bottom: 14px; }
+.text strong { color: var(--text); }
+.guide-list { list-style: none; margin: 10px 0 22px; }
+.guide-list li { font-size: 16px; line-height: 1.7; color: var(--muted); padding: 8px 0 8px 20px; position: relative; border-bottom: 1px solid var(--line); }
+.guide-list li:last-child { border-bottom: none; }
+.guide-list li::before { content: ''; position: absolute; left: 0; top: 15px; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+.guide-list li strong { color: var(--text); }
+.step { display: flex; gap: 18px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+.step__num { font-family: 'Libre Baskerville', Georgia, serif; font-style: italic; font-size: 24px; color: var(--accent); opacity: .45; min-width: 34px; line-height: 1.2; }
+.step__body { flex: 1; font-size: 15.5px; color: var(--muted); line-height: 1.7; }
+.step__body b { color: var(--text); }
+.quote { font-family: 'Libre Baskerville', Georgia, serif; font-style: italic; font-size: 17.5px; color: var(--text); border-left: 3px solid var(--accent); padding: 4px 0 4px 18px; margin: 18px 0; line-height: 1.65; }
+table { width: 100%; border-collapse: collapse; margin: 14px 0 24px; font-size: 15px; }
+th, td { text-align: left; vertical-align: top; padding: 11px 12px; border-bottom: 1px solid var(--line); line-height: 1.55; }
+th { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--soft); font-weight: 600; }
+td strong { color: var(--text); }
+.table-wrap { overflow-x: auto; }
+.btn-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 22px 0 8px; }
+.btn { display: inline-block; text-decoration: none; font-size: 13px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; padding: 12px 20px; border: 1px solid var(--accent); color: var(--accent); background: transparent; transition: .15s; }
+.btn:hover { background: var(--accent); color: #fff; }
+.btn--primary { background: var(--accent); color: #fff; }
+.btn--primary:hover { background: #4A5A43; }
+.footer { text-align: center; padding: 56px 24px; border-top: 1px solid var(--hair); margin-top: 56px; color: var(--soft); font-size: 14px; }
+@media print { .nav, .btn-row, .footer { display: none; } body { background: #fff; } }
+@media screen and (max-width: 768px) { .nav { padding: 16px 20px; } .hero h1 { font-size: 27px; } .section-heading { font-size: 22px; } }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a class="nav__mono" href="index.html">В</a>
+  <span class="nav__logo-name">Валентина Ивушкина</span>
+</nav>
+
+<div class="container">
+
+<section class="hero">
+  <div class="badge">Конспект созвона · 29 сентября</div>
+  <h1>Широкий оффер, два тарифа <em>и судьба продающего урока</em></h1>
+  <p class="hero__desc">О чём договорились: расширяем оффер с «проблем ЖКТ» на широкую аудиторию через три главные сферы маркетинга, перестраиваем продукт в одну программу с двумя тарифами, выстраиваем систему контента вместо «на вдохновении» — и что делаем с твоим продающим уроком, у которого конверсия 30%.</p>
+  <p class="hero__meta">ОФФЕР ПО ХОРМОЗИ · 2 ТАРИФА · СИСТЕМА КОНТЕНТА · ЗАДАНИЯ</p>
+</section>
+
+<div class="btn-row">
+  <a class="btn btn--primary" href="downloads/pdf/valya-konspekt-29-09.pdf" download>Скачать PDF</a>
+  <a class="btn" href="index.html">← Все материалы</a>
+</div>
+
+<h2 class="section-heading"><span>01.</span>Главное за 60 секунд</h2>
+<ul class="guide-list">
+  <li><strong>Оффер расширяем.</strong> Не только «у кого проблемы с ЖКТ», а «каждому человеку нужно следить за пищеварением и тем, что он ест» — для поддержания качества жизни, а не только для лечения. Чем шире оффер, тем больше людей узнают в нём себя.</li>
+  <li><strong>Весь маркетинг продаёт через три сферы:</strong> здоровье · красота и внешность · отношения. Любой продукт — от витаминов до салонов — заходит через них. Твоя тема касается всех трёх, и в контенте это надо показывать: пищеварение — это и кожа с волосами, и энергия для отношений, а не только живот.</li>
+  <li><strong>Порядок работы:</strong> оффер → упаковка → контент. Но делаем параллельно: Майя присылает план упаковки, сторителлинги-закрепы можно собирать уже сейчас — они начнут приносить заявки в текущую воронку.</li>
+  <li><strong>Продукт:</strong> одна программа, два тарифа — самостоятельный и с твоей обратной связью. Продаётся на постоянке сама, а заявки подороже ты добираешь в личные.</li>
+  <li><strong>Продающий урок оставляем</strong> — конверсия 3 из 10 на индивидуальную программу это отлично. Обновим презентацию и позже перезапишем расширенную версию под холодную аудиторию.</li>
+</ul>
+<div class="quote">Книга недели: Алекс Хормози, «$100M Offers» — как собирается оффер, который продаёт на широкую аудиторию.</div>
+
+<h2 class="section-heading"><span>02.</span>Продукт: одна программа — два тарифа</h2>
+<div class="table-wrap"><table>
+<tr><th>Тариф</th><th>Что внутри</th><th>Зачем</th></tr>
+<tr><td><strong>Самостоятельный</strong></td><td>Программа + быстрый первый результат в начале (например, тест «какой у тебя тип пищеварения» + первое улучшение за неделю)</td><td>Продаётся сам, без твоего времени</td></tr>
+<tr><td><strong>С обратной связью</strong></td><td>То же + твоё включение и разборы</td><td>Дороже; мостик к индивидуальной программе</td></tr>
+</table></div>
+<p class="text"><strong>Как усилить программу (и её цену):</strong> сейчас она в PDF — добавляем 1–2 коротких видеоурока, 1–2 подкаста-голосовых в Telegram с разбором темы, пару красивых гайдов и тест в начале. Всё это быстро собирается через Claude (вайб-кодинг), записывать можно в процессе — не откладывая запуск. Программа с видео и тестом воспринимается заметно дороже той же программы в PDF.</p>
+
+<h2 class="section-heading"><span>03.</span>Система контента вместо вдохновения</h2>
+<p class="text">Твоё «хочу сейчас выложить карусельку» — понятное желание, но на вдохновении рост не строится: у вдохновения лимит энергии. Работает система, в которой контент выходит каждый день независимо от настроения и времени, — тогда аудитория растёт постоянно (у Майи ~300 подписчиков в день именно поэтому), а не волнами.</p>
+<ul class="guide-list">
+  <li><strong>Парсер</strong> анализирует растущих блогеров твоей ниши — включая зарубежных, англоязычный рынок здоровья, — и показывает, что реально залетает. Мы не придумываем идеи из головы: берём работающие, адаптируем под тебя и выставляем. Это тема третьего созвона — парсер получишь там.</li>
+  <li><strong>Ритм:</strong> раз в неделю садишься и записываешь разговорные ролики пачкой, с них приходят заявки и автооплаты, а дорогие заявки добираешь в личных сообщениях.</li>
+  <li><strong>Карусели</strong> — твой любимый формат, и он останется: идеи для «вирусных» каруселей тоже берём из парсера, а не наугад, чтобы не стрелять по воробьям.</li>
+  <li><strong>Упаковка профиля — это тоже продажа:</strong> куда бы человек ни ткнул — пост, закреп, актуальное — всё ведёт на воронку. Поэтому сторителлинги-закрепы собираем уже сейчас: новые люди с будущих roликов будут приходить на готовое.</li>
+</ul>
+
+<h2 class="section-heading"><span>04.</span>Продающий урок: что решили</h2>
+<ul class="guide-list">
+  <li><strong>Урок работает:</strong> 3 из 10 посмотревших приходили на индивидуальную программу — это 30% конверсии, отличный показатель. Урок остаётся в воронке, ссылки поменяем, когда будет готова новая.</li>
+  <li><strong>Что мешает ему на холодной аудитории:</strong> длина (для 100 000 человек из рекомендаций нужно «в лоб» и коротко) и презентация в стиле «PowerPoint 2005» — визуалы и молодая аудитория такое не воспринимают. Кадр и подача — норм, менять не надо.</li>
+  <li><strong>Что делаем:</strong> новую красивую презентацию собирает Claude (твоя задача — просто прочитать текст по суфлёру), а расширенную версию урока строим по трём типам восприятия (визуалы · аудиалы · логики) и трём сферам: здоровье, внешность, отношения.</li>
+</ul>
+
+<h2 class="section-heading"><span>05.</span>Задания недели</h2>
+<div class="step"><span class="step__num">1</span><div class="step__body"><b>Скорректировать оффер под широкую аудиторию</b> — через три сферы: не «лечим ЖКТ», а «энергия, кожа, спокойствие и качество жизни начинаются с пищеварения». База — материалы на этой странице (тексты сайта и программа), корректируем их, а не пишем с нуля.</div></div>
+<div class="step"><span class="step__num">2</span><div class="step__body"><b>Упаковка профиля к следующему созвону.</b> Майя присылает план упаковки — по нему собираем шапку, закрепы и сторителлинги, которые уже сейчас ведут заявки в текущую воронку с индивидуальной программой.</div></div>
+<div class="step"><span class="step__num">3</span><div class="step__body"><b>Начать пересборку программы:</b> структура «один продукт — два тарифа», в дешёвый тариф добавить тест в начале и запланировать 1–2 видеоурока и подкасты (записываются в процессе, не блокируют запуск).</div></div>
+<div class="step"><span class="step__num">4</span><div class="step__body"><b>Прочитать/послушать Алекса Хормози «$100M Offers»</b> — хотя бы в саммари: это язык, на котором мы будем собирать твой оффер.</div></div>
+<div class="step"><span class="step__num">5</span><div class="step__body"><b>Собрать список блогеров своей ниши</b> (включая англоязычных про здоровье и питание) — растущих, у кого можно брать работающие идеи. Пригодится к третьему созвону, где подключаем парсер.</div></div>
+
+<div class="btn-row">
+  <a class="btn btn--primary" href="downloads/pdf/valya-konspekt-29-09.pdf" download>Скачать PDF</a>
+  <a class="btn" href="index.html">← Все материалы</a>
+</div>
+
+</div>
+
+<footer class="footer">© 2026 · maysoulme · Личная работа. Конспект созвона 29.09.2026.</footer>
+
+</body>
+</html>
